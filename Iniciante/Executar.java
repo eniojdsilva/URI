@@ -7,22 +7,14 @@ public class Executar {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
 
-        double a, b, c, pi = 3.14159, formula;
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
 
-        a = input.nextDouble();
-        b = input.nextDouble();
-        c = input.nextDouble();
+        int maiorAB = (a + b + Math.abs(a - b)) / 2;
+        int maiorABC = (maiorAB + c + Math.abs(maiorAB - c)) / 2;
 
-        formula = (a * c) / 2;
-        System.out.printf("TRIANGULO: %.3f%n", formula);
-        formula = Math.pow(c, 2) * pi;
-        System.out.printf("CIRCULO: %.3f%n", formula);
-        formula = ((a + b)*c)/2;
-        System.out.printf("TRAPEZIO: %.3f%n", formula);
-        formula = b * b;
-        System.out.printf("QUADRADO: %.3f%n", formula);
-        formula = (a * b);
-        System.out.printf("RETANGULO: %.3f%n", formula);
+        System.out.println(maiorABC + " eh o maior");
         
         input.close();
     }
